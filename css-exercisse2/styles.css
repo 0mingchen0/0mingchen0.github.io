@@ -1,3 +1,15 @@
 p{
     color:red;
 }
+#id1{
+    color: blue;
+    font-family: verdana;
+}
+.center{
+    text-align: center;
+    color:red;
+}
+.bluev p{
+    color: blue;
+    font-family: verdana;
+}
