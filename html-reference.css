@@ -1,0 +1,23 @@
+body {
+    font-family: 'Buda', cursive;
+    text-align: center;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #C5CAE9;
+}
+h1,h2 {
+    background-color: #B3E5FC;
+}
+
+h3 {
+    border:2px solid #7986CB;
+}
+p {
+    font-size:110%;
+}
