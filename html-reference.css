@@ -3,7 +3,6 @@ body {
     text-align: center;
 }
 
-
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
@@ -14,6 +13,7 @@ tr:nth-child(even) {
 }
 h1,h2 {
     background-color: #B3E5FC;
+    font-size:160%;
 }
 
 h3 {
@@ -22,6 +22,10 @@ h3 {
 p {
     font-size:140%;
 }
-.uniquestylesjusttomeettherequirments {
-    font-size:110%;
+.Pink {
+   color: #993366;
+   font-size:120%;
+}
+#id1{
+    color: #600080;
 }
