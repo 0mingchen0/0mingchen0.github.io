@@ -2,7 +2,10 @@ body {
     font-family: 'Buda', cursive;
     text-align: center;
 }
-
+.tablestyle{
+    text-align: center;
+    width: 100%
+}
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
