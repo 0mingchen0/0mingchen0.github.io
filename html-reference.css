@@ -16,6 +16,9 @@ td, th {
 tr:nth-child(even) {
     background-color: #C5CAE9;
 }
+tr:nth-child(odd) {
+    background-color: white;
+}
 h1,h2 {
     background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyhCm5Uam9yt8LIBhCYIozUrkoxit7Ce5sPDblv-5uarFzNp0v');
     background-size:100%;
