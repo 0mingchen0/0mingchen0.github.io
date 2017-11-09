@@ -1,8 +1,9 @@
 body {
     font-family: 'Buda', cursive;
     text-align: center;
-    background-image:url('https://i.pinimg.com/736x/9d/fa/07/9dfa0744744d3af3e555635762d85175--watercolor-lettering-watercolor-texture.jpg'); 
+    background-image:url('https://i.pinimg.com/736x/9d/fa/07/9dfa0744744d3af3e555635762d85175--watercolor-lettering-watercolor-texture.jpg');
     background-size:100%;
+
 }
 .tablestyle{
     text-align: center;
@@ -20,17 +21,16 @@ tr:nth-child(odd) {
     background-color: white;
 }
 h1,h2 {
-    background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyhCm5Uam9yt8LIBhCYIozUrkoxit7Ce5sPDblv-5uarFzNp0v');
-    background-size:100%;
-    color:white;
+    background-color:#C5CAE9;
     font-size:160%;
 }
 
 h3 {
     border:2px solid #7986CB;
+    font-size:135%;
 }
 p {
-    font-size:140%;
+    font-size:120%;
 }
 .Pink {
    color: #993366;
@@ -39,4 +39,5 @@ p {
 #id1{
     color: #600080;
 }
+
 
