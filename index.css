@@ -1,1 +1,23 @@
+.homepage{
+    background-image:url('https://png.pngtree.com/thumb_back/fw800/back_pic/03/80/98/9757c4f52e6ba20.jpg');
+    font-family: 'Megrim', cursive;
+    font-weight: lighter;
+    font-size:70px;
+    text-align: center;
+}
 
+.welcome{
+    background-image:url('https://www.wallpapersbrowse.com/images/fb/fbw1ywl.jpg');
+    font-family: 'Poiret One', cursive;
+    font-weight: lighter;
+    font-size:25px;
+    text-align: center;
+}
+ol{
+ background-image:url('https://t3.ftcdn.net/jpg/01/27/54/24/240_F_127542471_E96ptboGbuy2hGaOa0Su5Kj3JuWqMOrR.jpg');
+ background-size:100%;
+ font-family: 'Poiret One', cursive;
+ font-weight: 500;
+    font-size:20px;
+    text-align: center;
+}
