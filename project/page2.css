@@ -1,0 +1,57 @@
+body{
+    background-image:url('http://s3-us-west-2.amazonaws.com/nichegamer/wp-content/uploads/2016/02/durarara-02-16-16-1-1024x576.jpeg');
+     background-size:100%;
+
+}
+.content {
+  background-color: white;
+}
+
+.content p {
+  color:black;
+  font-family: 'Life Savers', cursive;
+  font-size: 120%;
+}
+
+img {
+  width:100%;
+}
+h1{
+    font-size: 400%;
+    font-family: 'Bungee Shade', cursive;
+}
+h2{
+    font-family: 'Fontdiner Swanky', cursive;
+    font-weight: 100;
+    font-size: 130%;
+    text-align: center;
+    background-color: yellow;
+}
+h3{
+    font-family: 'Fontdiner Swanky', cursive;
+    font-weight: 100;
+    font-size: 125%
+}
+ul{
+  color:black;
+  font-family: 'Life Savers', cursive;
+  font-size: 120%;
+
+}
+table {
+    font-family: 'Life Savers', cursive;
+    color: black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: Yellow;
+}
+
