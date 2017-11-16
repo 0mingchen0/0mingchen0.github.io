@@ -1,0 +1,38 @@
+body{
+    background-image:url('https://orig00.deviantart.net/cdf9/f/2012/155/0/3/dulahan_wallpaper_by_greedandgluttony-d52a07y.jpg');
+     background-size:100%;
+
+}
+.content {
+  background-color: white;
+}
+
+.content p {
+  color:black;
+  font-family: 'Life Savers', cursive;
+  font-size: 120%;
+}
+
+img {
+  width:100%;
+}
+h1{
+    font-size: 400%;
+    font-family: 'Bungee Shade', cursive;
+}
+h2{
+    font-family: 'Fontdiner Swanky', cursive;
+    font-weight: 100;
+    font-size: 130%;
+    text-align: center;
+    background-color: yellow;
+}
+h3{
+    font-family: 'Fontdiner Swanky', cursive;
+    font-weight: 100;
+    font-size: 125%
+}
+li{
+    font-family: 'Life Savers', cursive;
+    font-size: 130%;
+}
