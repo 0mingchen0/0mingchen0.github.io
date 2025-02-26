@@ -80,4 +80,51 @@
 
 		}
 
+	// Theme change function
+	function changeTheme(theme) {
+		const root = document.documentElement;
+		const images = document.querySelectorAll('#two .image img');
+
+	
+		switch(theme) {
+		  case 'Red':
+			root.style.setProperty('--background-color', 'maroon');
+			root.style.setProperty('--second-color', '#340414');
+			root.style.setProperty('--menu-color', '#873032');
+			images.forEach(img => img.classList.remove('purple-filter'));
+			break;
+		  case 'Purple':
+			root.style.setProperty('--background-color', '#663399');
+			root.style.setProperty('--second-color', '#371b4f');
+			root.style.setProperty('--menu-color', '#645394');
+			images.forEach(img => img.classList.add('purple-filter'));
+			break;
+		  default:
+			root.style.setProperty('--background-color', '');
+			images.forEach(img => img.classList.remove('purple-filter'));
+			break;
+		}
+	  }
+	
+	  // Make changeTheme function globally accessible
+	  window.changeTheme = changeTheme;
+
+	   // Function to create stars
+  	function createStars() {
+    	const starsContainer = document.querySelector('.stars');
+    	const starCount = 100; // Number of stars
+
+    	for (let i = 0; i < starCount; i++) {
+      	const star = document.createElement('div');
+      	star.classList.add('star');
+      	star.style.top = `${Math.random() * 100}vh`;
+      	star.style.left = `${Math.random() * 100}vw`;
+      	star.style.animationDuration = `${Math.random() * 2 + 1}s`;
+      	starsContainer.appendChild(star);
+   		 }
+  	}
+
+  // Call the function to create stars on DOMContentLoaded
+  document.addEventListener("DOMContentLoaded", createStars)
+	
 })(jQuery);

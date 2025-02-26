@@ -72,7 +72,120 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* Animations */ 
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+}
+
+#two .content h2:hover,
+#two .content p:hover {
+  animation: wiggle 0.7s ease-in-out infinite;
+}
+
+/* floating stars */ 
+
+..stars {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none; /* Ensure stars don't interfere with other elements */
+	z-index: 1000; /* Ensure stars are on top */
+	overflow: hidden;
+  }
+  
+  .star {
+	position: absolute;
+	width: 2px;
+	height: 2px;
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0 0 10px white;
+	animation: twinkle 2s infinite ease-in-out, float 10s infinite ease-in-out;
+  }
+  
+  @keyframes twinkle {
+	0%, 100% {
+	  opacity: 0.5;
+	}
+	50% {
+	  opacity: 1;
+	}
+  }
+  
+  @keyframes float {
+	0% {
+	  transform: translate(0, 0);
+	}
+	50% {
+	  transform: translate(3px, -3px);
+	}
+	100% {
+	  transform: translate(0, 0);
+	}
+  }
+/* color changing buttons*/
+
+.theme-buttons {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	z-index: 1000;
+  }
+  
+  .theme-buttons button {
+	margin: 5px;
+	padding: 10px;
+	cursor: pointer;
+  }
+
+  .purple-filter {
+	filter: hue-rotate(270deg);
+	transition: filter 0.5s ease;
+  }
+
+  #two .image img {
+	transition: filter 0.5s ease;
+  }
+
+  .color-buttons {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+  }
+  
+  .color-button {
+	width: 15px; /* Smaller size */
+	height: 25px; /* Smaller size */
+	border-radius: 15%;
+	border: none;
+	outline: 0;
+	cursor: pointer;
+	margin: 0 5px; /* Adjust margin to place them closer */
+	display: inline-block; /* Ensure they are inline */
+  }
+  
+  .color-button.red {
+	background-color: #761414;
+  }
+  
+  .color-button.purple {
+	background-color: #a97ea9;
+  }
 /* Basic */
+	:root {
+	--background-color: maroon;
+	--second-color: #340414;
+	--menu-color: #873632;
+	--text-color: #000;
+  	}
 
 	@-ms-viewport {
 		width: device-width;
@@ -87,7 +200,8 @@ input, select, textarea {
 	}
 
 	body {
-		background: maroon;
+		background: var(--background-color);
+		transition: background-color 0.9s ease, color 0.9s ease;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1875,7 +1989,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			box-shadow: 0 0 0 2px #873632;
+			box-shadow: 0 0 0 2px var(--menu-color);
 		}
 
 	select {
@@ -1965,14 +2079,14 @@ input, select, textarea {
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: #340414;
+			background: var(--second-color);
 			color: #fff;
 			content: '\f00c';
 		}
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			box-shadow: 0 0 0 2px #873632;
+			box-shadow: 0 0 0 2px var(--menu-color);
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2833,7 +2947,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #873632;
+			background-color: var(--menu-color);
 			color: #c8ece9;
 		}
 
@@ -2887,7 +3001,7 @@ input, select, textarea {
 
 				.wrapper.style1 select option {
 					color: #ffffff;
-					background: #873632;
+					background: var(--menu-color);
 				}
 
 			.wrapper.style1 input[type="checkbox"] + label,
@@ -2903,7 +3017,7 @@ input, select, textarea {
 			.wrapper.style1 input[type="checkbox"]:checked + label:before,
 			.wrapper.style1 input[type="radio"]:checked + label:before {
 				background: #ffffff;
-				color: #873632;
+				color: var(--menu-color);
 			}
 
 			.wrapper.style1 ::-webkit-input-placeholder {
@@ -2992,7 +3106,7 @@ input, select, textarea {
 			}
 
 		.wrapper.style2 {
-			background-color: #340414;
+			background-color: var(--second-color);
 		}
 
 		.wrapper.style3 {
@@ -3365,9 +3479,9 @@ input, select, textarea {
 		-moz-transition: -moz-transform 0.5s ease;
 		-webkit-transition: -webkit-transform 0.5s ease;
 		-ms-transition: -ms-transform 0.5s ease;
-		transition: transform 0.5s ease;
+		transition: background-color 0.8s ease, color 0.8s ease, transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #873632;
+		background: var(--menu-color);
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
@@ -3460,7 +3574,7 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease;
 		-ms-transition: background-color 0.2s ease;
 		transition: background-color 0.2s ease;
-		background: #340414;
+		background: var(--second-color);
 		height: 3em;
 		left: 0;
 		line-height: 3em;

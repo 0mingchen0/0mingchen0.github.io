@@ -6,14 +6,15 @@
 -->
 <html>
 	<head>
-		<title>Spectral by HTML5 UP</title>
+		<title>Welcome.</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
 	</head>
 
 	<!-- <div id="waifu">
@@ -34,9 +35,10 @@
 	   src 中改为你存放的路径    -->
 	<!-- <script src="..assets/js/live2d_bundle.js"></script>
 	<script async type="module" src="..assets/js/waifu-tips.js"></script> -->
+	
 
 	<body class="landing is-preload">
-
+		<div class="stars"></div>
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
@@ -55,7 +57,13 @@
 											<li><a href="elements.html">all at once</a></li>
 											<li><a href = "https://melfunction.netlify.app/">2023 Website Archive</a></li>
                       						<li><a href = "Old_archive\index.html">2017 Website Archive</a></li>
+											<!-- <li><button class="color-button red" onclick="changeTheme('Red')"></button></li>
+											<li><button class="color-button purple" onclick="changeTheme('Purple')"></button></li> -->
 										</ul>
+										<div class="color-buttons">
+											<button class="color-button red" onclick="changeTheme('Red')"></button>
+											<button class="color-button purple" onclick="changeTheme('Purple')"></button>
+										</div>
 									</div>
 								</li>
 							</ul>
@@ -68,7 +76,7 @@
 							<h2><fancy>Nice to meet you.</fancy></h2>
 							<p><cursive>The name is Mel.</cursive></p>
 							<p>Here lies a website under construction,<br />
-							and the countless things that made me into who I am.</a>.</p>
+							and the countless things that made me into who I am</a>.</p>
 						</div>
 							<img src="images/moon2.gif" class = "background">
 						<a href="#one" class="more scrolly">Get to know me?</a>
@@ -86,7 +94,7 @@
 					</section>
 
 				<!-- Two -->
-					<section id="two" class="wrapper alt style2">
+					<section id="two" class="wrapper alt style2 wiggle">
 						<section class="spotlight">
 							<div class="image"><img src="images/red.jpg" alt="" /></div><div class="content">
 								<h2>Everything</h2>
@@ -106,8 +114,7 @@
 							</div>
 						</section>
 					</section>
-
-
+	
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="icons">
@@ -123,8 +130,10 @@
 					</footer>
 
 			</div>
+			
 
 		<!-- Scripts -->
+			<script type="module" src="/src/main.ts"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
