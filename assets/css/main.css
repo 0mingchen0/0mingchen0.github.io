@@ -4089,17 +4089,19 @@ input, select, textarea {
 
 /* Landing */
 
-	.background {
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		object-fit: none;
-		transform: scale(2);
-		transform-style: preserve-3d;
-		z-index: -1;
-		opacity: 0.5;
-	}
-	
+.background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+    object-fit: contain;
+    transform: translate(-50%, -50%); /* Always center */
+    z-index: -1;
+    opacity: 0.5;
+}
+
+
 	body.landing #page-wrapper {
 		background-color: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), maroon;
 		/* background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");

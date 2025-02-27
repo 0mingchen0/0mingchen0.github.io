@@ -6,13 +6,46 @@
 -->
 <html>
 	<head>
-		<title>Generic - Spectral by HTML5 UP</title>
+		<title>Everything</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	
 	<body class="is-preload">
+		
+<!-- 看板娘开始 -->
+<link href='https://cdn.jsdelivr.net/gh/xiaoyanu/file-test@2021.12.1-2/kbn/pio.css' rel='stylesheet' type='text/css'/>
+    <!-- 可选位置： left 或 right -->
+    <div class="pio-container left">
+        <div class="pio-action"></div>
+        <!-- 高度和宽度根据每个模型的不同 进行调整 -->
+        <canvas id="pio" width="170" height="295"></canvas>
+    </div>
+    <script src='https://cdn.jsdelivr.net/gh/xiaoyanu/file-test@2021.12.1-2/kbn/l2d.js'></script>
+    <script src='https://cdn.jsdelivr.net/gh/xiaoyanu/file-test@2021.12.1-2/kbn/pio.js'></script>
+    <script>
+        var pio = new Paul_Pio({
+            "mode": "fixed",
+            "touch": ["点击提示文字在kbn/pio.js中修改"],
+            "hidden": false, //手机端是否隐藏
+            "referer": "?欢迎来自 %t 的朋友~",
+            "content": {
+                "welcome": "?欢迎来到本站！"
+            },
+            // 可用参数：
+            // "leimu" "1" "2" "kangna" "qingye" "shawu" "xiaomai" "zhinai"
+            
+            // 举例子：
+            // "model": ["https://cdn.jsdelivr.net/gh/xiaoyanu/file-test@2021.12.1/kbn/ 可修改参数位置 /model.json"],
+            
+            "model": ["https://cdn.jsdelivr.net/gh/xiaoyanu/file-test@2021.12.1/kbn/xiaomai/model.json"],
+            
+            "tips": true //如果设置为false则会优先显示welcome中的内容“欢迎~”
+        });
+    </script>
+<!-- 看板娘结束 -->
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
@@ -27,11 +60,18 @@
 									<div id="menu">
 										<ul>
 											<li><a href="index.html">Home</a></li>
-											<li><a href="generic.html">Generic</a></li>
-											<li><a href="elements.html">Elements</a></li>
-											<li><a href="#">Sign Up</a></li>
-											<li><a href="#">Log In</a></li>
+											<li><a href="everything.html">everything</a></li>
+											<li><a href="everywhere.html">everywhere</a></li>
+											<li><a href="elements.html">all at once</a></li>
+											<li><a href = "https://melfunction.netlify.app/">2023 Website Archive</a></li>
+                      						<li><a href = "Old_archive\index.html">2017 Website Archive</a></li>
+											<!-- <li><button class="color-button red" onclick="changeTheme('Red')"></button></li>
+											<li><button class="color-button purple" onclick="changeTheme('Purple')"></button></li> -->
 										</ul>
+										<div class="color-buttons">
+											<button class="color-button red" onclick="changeTheme('Red')"></button>
+											<button class="color-button purple" onclick="changeTheme('Purple')"></button>
+										</div>
 									</div>
 								</li>
 							</ul>
