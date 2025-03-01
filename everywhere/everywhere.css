@@ -1,0 +1,110 @@
+body {
+    font-family: "Turret Road", sans-serif;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+}
+
+#tagCloud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+/* intro animation */
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Apply the fade-in animation to tag items */
+.tagcloud--item {
+    animation: fadeIn 4s ease-in-out;
+}
+
+
+/* Style for clickable tag buttons */
+.tag-button {
+    color: aliceblue;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Highlight the tag text on hover */
+.tagcloud--item:hover {
+    color: purple; /* Change the text color to a highlight color (e.g., tomato red) */
+    text-decoration: underline; /* Underline the text when hovered */
+    cursor: pointer; /* Change cursor to indicate it is clickable */
+}
+
+
+/* Style for stars*/
+.star {
+    position: absolute;
+    background: white;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px white;
+    animation: twinkle 2s infinite alternate, fadeIn 2s ease-in-out;;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.3); }
+}
+
+
+/* font */ 
+.turret-road-extralight {
+    font-family: "Turret Road", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .turret-road-light {
+    font-family: "Turret Road", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .turret-road-regular {
+    font-family: "Turret Road", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .turret-road-medium {
+    font-family: "Turret Road", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .turret-road-bold {
+    font-family: "Turret Road", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .turret-road-extrabold {
+    font-family: "Turret Road", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  

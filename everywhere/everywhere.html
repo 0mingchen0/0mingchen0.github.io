@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Everywhere</title>
+	<link rel="stylesheet" href="everywhere.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div id="tagCloud"></div>
+	<script type="text/javascript" src="TagCloud.min.js"></script>
+
+	<script>
+		const tags = [
+			"Chess", "Art", "Gituar", "Web Dev", "Game Dev", "Animations",
+			"3D Modeling", "Characters", "Data Science", "Everything Else"
+		];
+
+		TagCloud('#tagCloud', tags, {
+			radius: 300,
+			maxSpeed: 'fast',
+			initSpeed: 'normal',
+			direction: 135,
+			keep: true
+		});
+
+		// Event Delegation: Add click event listener to the root tag cloud element
+		document.getElementById("tagCloud").addEventListener("click", function (e) {
+			if (e.target.classList.contains("tagcloud--item")) {
+					window.open(`https://www.google.com/search?q=${e.target.innerText}`, '_blank');
+			}
+		});
+	</script>
+
+	<script>
+		function createStars(numStars) {
+			for (let i = 0; i < numStars; i++) {
+				let star = document.createElement("div");
+				star.classList.add("star");
+
+				let x = Math.random() * window.innerWidth;
+				let y = Math.random() * window.innerHeight;
+				let size = Math.random() * 3 + 1;
+				let duration = Math.random() * 2 + 1;
+
+				star.style.left = `${x}px`;
+				star.style.top = `${y}px`;
+				star.style.width = `${size}px`;
+				star.style.height = `${size}px`;
+				star.style.animationDuration = `${duration}s`;
+
+				document.body.appendChild(star);
+			}
+		}
+
+		createStars(100); // Adjust number of stars as needed
+	</script>
+
+</body>
+
+</html>
