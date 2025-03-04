@@ -10,68 +10,103 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap"
 		rel="stylesheet">
+	<link rel="icon" type="image/png" href="/images/mars.png" />
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FPWZMV2GRR"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	window.dataLayer = window.dataLayer || [];
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
 
-  gtag('config', 'G-FPWZMV2GRR');
+	gtag('config', 'G-FPWZMV2GRR');
 </script>
 
 <body>
-	<div id="tagCloud"></div>
-	<script type="text/javascript" src="TagCloud.min.js"></script>
+	<div class="container">
+		<div id="tagCloud"></div>
+		<script type="text/javascript" src="TagCloud.min.js"></script>
 
-	<script>
-		const tags = [
-			"Chess", "Art", "Gituar", "Web Dev", "Game Dev", "Animations",
-			"3D Modeling", "Characters", "Data Science", "Everything Else"
-		];
+		<script>
+			const tags = [
+				"Chess", "Art", "Gituar", "Web Dev", "Game Dev", "Animations",
+				"3D Modeling", "Characters", "Data Science", "Everything Else"
+			];
 
-		TagCloud('#tagCloud', tags, {
-			radius: 300,
-			maxSpeed: 'fast',
-			initSpeed: 'normal',
-			direction: 135,
-			keep: true
-		});
+			TagCloud('#tagCloud', tags, {
+				radius: 300,
+				maxSpeed: 'fast',
+				initSpeed: 'normal',
+				direction: 135,
+				keep: true
+			});
 
-		// Event Delegation: Add click event listener to the root tag cloud element
-		document.getElementById("tagCloud").addEventListener("click", function (e) {
-			if (e.target.classList.contains("tagcloud--item")) {
-				window.open(`https://www.google.com/search?q=${e.target.innerText}`, '_blank');
+			// Event Delegation: Add click event listener to the root tag cloud element
+			document.getElementById("tagCloud").addEventListener("click", function (e) {
+				if (e.target.classList.contains("tagcloud--item")) {
+					window.open(`https://www.google.com/search?q=${e.target.innerText}`, '_blank');
+				}
+			});
+		</script>
+
+		<script>
+			function createStars(numStars) {
+				for (let i = 0; i < numStars; i++) {
+					let star = document.createElement("div");
+					star.classList.add("star");
+
+					let x = Math.random() * window.innerWidth;
+					let y = Math.random() * window.innerHeight;
+					let size = Math.random() * 3 + 1;
+					let duration = Math.random() * 2 + 1;
+
+					star.style.left = `${x}px`;
+					star.style.top = `${y}px`;
+					star.style.width = `${size}px`;
+					star.style.height = `${size}px`;
+					star.style.animationDuration = `${duration}s`;
+
+					document.body.appendChild(star);
+				}
 			}
-		});
-	</script>
 
-	<script>
-		function createStars(numStars) {
-			for (let i = 0; i < numStars; i++) {
-				let star = document.createElement("div");
-				star.classList.add("star");
+			createStars(100); // Adjust number of stars as needed
+		</script>
+	</div>
 
-				let x = Math.random() * window.innerWidth;
-				let y = Math.random() * window.innerHeight;
-				let size = Math.random() * 3 + 1;
-				let duration = Math.random() * 2 + 1;
+	<!-- Menu -->
 
-				star.style.left = `${x}px`;
-				star.style.top = `${y}px`;
-				star.style.width = `${size}px`;
-				star.style.height = `${size}px`;
-				star.style.animationDuration = `${duration}s`;
-
-				document.body.appendChild(star);
-			}
-		}
-
-		createStars(100); // Adjust number of stars as needed
-	</script>
-
+	<nav class="nav">
+		<input id="menu" type="checkbox">
+		<label for="menu">Menu</label>
+		<ul class="menu">
+			<li>
+				<a href="#0">
+					<span>About</span>
+					<i class="fas fa-address-card" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="#0">
+					<span>Projects</span>
+					<i class="fas fa-tasks" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="#0">
+					<span>Clients</span>
+					<i class="fas fa-users" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="#0">
+					<span>Contact</span>
+					<i class="fas fa-envelope-open-text" aria-hidden="true"></i>
+				</a>
+			</li>
+		</ul>
+	</nav>
 </body>
 
 </html>
