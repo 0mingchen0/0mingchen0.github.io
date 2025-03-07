@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Leave a Comment</h1>
+        <form id="commentForm">
+            <textarea id="commentInput" placeholder="Write your comment here..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="commentsSection">
+            <h2>Comments</h2>
+            <ul id="commentsList"></ul>
+        </div>
+    </div>
+    <script>
+        async function fetchComments() {
+            const response = await fetch('https://zeromingchen0-github-io.onrender.com');
+            const comments = await response.json();
+            const commentList = document.getElementById('commentsList');
+            commentList.innerHTML = '';
+            comments.forEach(comment => {
+                const newComment = document.createElement('li');
+                newComment.textContent = comment;
+                commentList.appendChild(newComment);
+            });
+        }
+
+        document.getElementById('commentForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const commentText = document.getElementById('commentInput').value;
+            if (commentText.trim() !== "") {
+                await fetch('https://zeromingchen0-github-io.onrender.com', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ comment: commentText })
+                });
+                document.getElementById('commentInput').value = "";
+                fetchComments();
+            }
+        });
+
+        fetchComments();
+    </script>
+</body>
+</html>
