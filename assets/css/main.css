@@ -441,8 +441,8 @@ Good for menu buttons though, this would use a transform animation instead of a 
 
 /* Basic */
 :root {
-	--background-color: maroon;
-	--second-color: #340414;
+	--background-color: #4A010A;
+	--second-color: #312520;
 	--menu-color: #873632;
 	--text-color: #000;
 }

@@ -31,11 +31,12 @@
 		<script>
 			const tags = [
 				"Chess", "Art", "Gituar", "Web Dev", "Game Dev", "Animations",
-				"3D Modeling", "Characters", "Data Science", "Everything Else"
+				"3D Modeling", "Characters", "Data Science", "Everything Else",
+				"Words", "Photos", "Code"
 			];
 
 			TagCloud('#tagCloud', tags, {
-				radius: 300,
+				radius: 250,
 				maxSpeed: 'fast',
 				initSpeed: 'normal',
 				direction: 135,
@@ -47,8 +48,13 @@
 				if (e.target.classList.contains("tagcloud--item")) {
 					window.open(`https://www.google.com/search?q=${e.target.innerText}`, '_blank');
 				}
+				if (e.target.classList.contains("Chess")) {
+					window.open(`https://melfunction.netlify.app/blogs/chess.html`, '_blank');
+				}
 			});
 		</script>
+
+		<!--add stars to the background--> 
 
 		<script>
 			function createStars(numStars) {
@@ -56,9 +62,9 @@
 					let star = document.createElement("div");
 					star.classList.add("star");
 
-					let x = Math.random() * window.innerWidth;
-					let y = Math.random() * window.innerHeight;
 					let size = Math.random() * 3 + 1;
+					let x = Math.random() * (window.innerWidth - size);
+            		let y = Math.random() * (window.innerHeight - size);
 					let duration = Math.random() * 2 + 1;
 
 					star.style.left = `${x}px`;
@@ -81,30 +87,10 @@
 		<input id="menu" type="checkbox">
 		<label for="menu">Menu</label>
 		<ul class="menu">
-			<li>
-				<a href="#0">
-					<span>About</span>
-					<i class="fas fa-address-card" aria-hidden="true"></i>
-				</a>
-			</li>
-			<li>
-				<a href="#0">
-					<span>Projects</span>
-					<i class="fas fa-tasks" aria-hidden="true"></i>
-				</a>
-			</li>
-			<li>
-				<a href="#0">
-					<span>Clients</span>
-					<i class="fas fa-users" aria-hidden="true"></i>
-				</a>
-			</li>
-			<li>
-				<a href="#0">
-					<span>Contact</span>
-					<i class="fas fa-envelope-open-text" aria-hidden="true"></i>
-				</a>
-			</li>
+			<li><a href="../index.html">Home sweet home</a></li>
+			<li><a href="../everywhere/everywhere.html">everything</a></li> <!-- yes, everything and everywhere are switched. I promised I'm not quirky I'm just lazy. -->
+			<li><a href="../everything/everything.html">everywhere</a></li>
+			<li><a href="../allatonce/allatonce.html">all at once</a></li>
 		</ul>
 	</nav>
 </body>
